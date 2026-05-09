@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Legal & Financial Associates | Leading CA & Law Firm in Coimbatore</title>
+    <meta name="description" content="Professional CA and Legal services in Coimbatore. Tax planning, GST filing, company registration, and legal advisory. Expert advice, trusted results.">
+    <meta name="keywords" content="CA Firm Coimbatore, Tax Consultant Coimbatore, Legal Services Coimbatore, GST Filing Coimbatore, Company Registration Tamil Nadu">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        :root {
+            --navy: #0D2137;
+            --gold: #B8960C;
+            --white: #FFFFFF;
+            --bg-light: #F4F7F9;
+            --text-dark: #1A1A1A;
+            --text-muted: #555555;
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* --- Stately Reveal --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Gold Glow --- */
+        .trust-card:hover {
+            box-shadow: 0 0 40px rgba(184, 150, 12, 0.15);
+            border-color: var(--gold);
+        }
+
+        /* --- Magnetic --- */
+        .magnetic {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1, h2, h3, h4, .serif {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .cta-btn {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--navy);
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background: transparent;
+            color: var(--navy);
+        }
+
+        /* --- Hero --- */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(13, 33, 55, 0.85), rgba(13, 33, 55, 0.85)), 
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: statelySlide 1.2s ease both;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            animation: statelySlide 1.2s ease 0.2s both;
+        }
+
+        @keyframes statelySlide {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Practice Areas Strip --- */
+        .services-strip {
+            background: var(--navy);
+            display: flex;
+            justify-content: space-around;
+            padding: 3rem 8%;
+            flex-wrap: wrap;
+            gap: 2rem;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .strip-item {
+            color: var(--white);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .strip-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* --- Content Sections --- */
+        section {
+            padding: 8rem 8%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header span {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        /* --- Why Trust Us --- */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .trust-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--bg-light);
+            transition: var(--transition);
+        }
+
+        .trust-card:hover {
+            transform: translateY(-10px);
+            background: var(--white);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .trust-card i {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .trust-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        /* --- Team --- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .team-member {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-img {
+            height: 400px;
+            background: #eee;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-img img {
+            transform: scale(1.05);
+        }
+
+        .member-info h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .member-info p {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- WhatsApp Float --- */
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: #25D366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 10000;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- Contact Form --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+        }
+
+        .info-box {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem;
+        }
+
+        .info-box h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail i {
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .consultation-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .consultation-form input, .consultation-form select, .consultation-form textarea {
+            padding: 1.2rem;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .consultation-form input:focus {
+            border-color: var(--gold);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #081625;
+            color: var(--white);
+            padding: 6rem 8% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-col p {
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.5;
+        }
+
+        /* --- Page Management --- */
+        .page { display: none; }
+        .page.active { display: block; }
+
+        /* Mobile */
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .contact-container { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            #hero { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WA Float -->
+    <a href="https://wa.me/919000000000" class="wa-float">
+        <i class="ph-bold ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Nav -->
+    <nav>
+        <a href="#" class="logo" onclick="showPage('home')">
+            <span class="logo-main">APEX ASSOCIATES</span>
+            <span class="logo-sub">Legal & Financial Excellence</span>
+        </a>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('services')">Services</a>
+            <a href="#" onclick="showPage('team')">The Team</a>
+            <a href="#" onclick="showPage('blog')">Insights</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+        </div>
+        <a href="#contact" class="cta-btn magnetic" onclick="showPage('contact')">Book Consultation</a>
+    </nav>
+
+    <!-- --- HOME PAGE --- -->
+    <main id="home-page" class="page active">
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="serif">Your Legal & Financial Expert in Coimbatore</h1>
+                <p>Providing strategic tax planning, robust legal advisory, and comprehensive compliance solutions for over 15 years.</p>
+                <a href="#contact" class="cta-btn" style="background: var(--gold); border-color: var(--gold);" onclick="showPage('contact')">Get Free Consultation</a>
+            </div>
+        </section>
+
+        <div class="services-strip">
+            <div class="strip-item"><i class="ph-fill ph-file-text"></i> GST Filing</div>
+            <div class="strip-item"><i class="ph-fill ph-chart-line-up"></i> Tax Planning</div>
+            <div class="strip-item"><i class="ph-fill ph-buildings"></i> Company Reg.</div>
+            <div class="strip-item"><i class="ph-fill ph-gavel"></i> Legal Advisory</div>
+            <div class="strip-item"><i class="ph-fill ph-shield-check"></i> Compliance</div>
+        </div>
+
+        <section id="about">
+            <div class="contact-container" style="align-items: center;">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000&auto=format&fit=crop" alt="Legal Office" style="width: 100%; box-shadow: 20px 20px 0 var(--gold);">
+                </div>
+                <div class="about-text">
+                    <span>SINCE 2008</span>
+                    <h2 class="serif">Over a Decade of Professional Excellence</h2>
+                    <p style="margin: 2rem 0;">Apex Associates is a premier multi-disciplinary firm in Coimbatore, blending deep legal expertise with precise financial consultancy. We empower businesses and individuals to navigate complex regulatory landscapes with confidence.</p>
+                    <div class="trust-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <i class="ph-bold ph-check-circle" style="color: var(--gold); font-size: 1.5rem;"></i>
+                            <p><b>15+ Years Experience</b></p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <i class="ph-bold ph-check-circle" style="color: var(--gold); font-size: 1.5rem;"></i>
+                            <p><b>500+ Active Clients</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-trust" style="background: var(--bg-light);" class="reveal">
+            <div class="section-header">
+                <span>COMMITMENT</span>
+                <h2 class="serif">Why Choose Apex Associates?</h2>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <i class="ph ph-certificate"></i>
+                    <h3 class="serif">Certified Experts</h3>
+                    <p>Qualified CAs and seasoned Advocates with specialized domain knowledge.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="ph ph-shield-star"></i>
+                    <h3 class="serif">Full Confidentiality</h3>
+                    <p>Your sensitive data and legal matters are protected by professional privilege.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="ph ph-timer"></i>
+                    <h3 class="serif">On-Time Compliance</h3>
+                    <p>Never miss a deadline with our proactive filing and alert systems.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="ph ph-handshake"></i>
+                    <h3 class="serif">Client-Centric</h3>
+                    <p>Personalized strategies that align with your specific financial goals.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="section-header">
+                <span>OUR PROFESSIONALS</span>
+                <h2 class="serif">Meet Our Partners</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500&auto=format&fit=crop" alt="Partner"></div>
+                    <div class="member-info">
+                        <h4 class="serif">CA Rajesh Khanna</h4>
+                        <p>Senior Partner • Taxation & Audit</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=500&auto=format&fit=crop" alt="Partner"></div>
+                    <div class="member-info">
+                        <h4 class="serif">Adv. Meera Nair</h4>
+                        <p>Managing Partner • Corporate Law</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=500&auto=format&fit=crop" alt="Partner"></div>
+                    <div class="member-info">
+                        <h4 class="serif">CA S. Venkatesh</h4>
+                        <p>Partner • GST & Compliance</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="#" class="cta-btn" onclick="showPage('team')">View Detailed Profiles</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- --- SERVICES PAGE --- -->
+    <main id="services-page" class="page">
+        <section>
+            <div class="section-header">
+                <span>OUR EXPERTISE</span>
+                <h2 class="serif">Comprehensive Solutions</h2>
+            </div>
+            <div class="trust-grid">
+                <!-- Detailed Service Cards -->
+                <div class="trust-card" style="text-align: left; background: var(--white); border: 1px solid #eee;">
+                    <h3 class="serif" style="color: var(--gold);">Taxation & Audit</h3>
+                    <p style="margin-bottom: 1.5rem;">Income tax planning, representation, and statutory audits for corporations and firms.</p>
+                    <a href="https://wa.me/919000000000" class="cta-btn" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Enquire Now</a>
+                </div>
+                <div class="trust-card" style="text-align: left; background: var(--white); border: 1px solid #eee;">
+                    <h3 class="serif" style="color: var(--gold);">GST Compliance</h3>
+                    <p style="margin-bottom: 1.5rem;">Registration, monthly filing, annual returns, and audit assistance under GST law.</p>
+                    <a href="https://wa.me/919000000000" class="cta-btn" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Enquire Now</a>
+                </div>
+                <div class="trust-card" style="text-align: left; background: var(--white); border: 1px solid #eee;">
+                    <h3 class="serif" style="color: var(--gold);">Corporate Law</h3>
+                    <p style="margin-bottom: 1.5rem;">Company formation (LLP, PVT LTD), ROC filings, and secretarial compliance.</p>
+                    <a href="https://wa.me/919000000000" class="cta-btn" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Enquire Now</a>
+                </div>
+                <div class="trust-card" style="text-align: left; background: var(--white); border: 1px solid #eee;">
+                    <h3 class="serif" style="color: var(--gold);">Legal Litigation</h3>
+                    <p style="margin-bottom: 1.5rem;">Representation in civil matters, contract disputes, and property documentation.</p>
+                    <a href="https://wa.me/919000000000" class="cta-btn" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Enquire Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- --- TEAM PAGE --- -->
+    <main id="team-page" class="page">
+        <section>
+            <div class="section-header">
+                <span>OUR EXPERTISE</span>
+                <h2 class="serif">The Experts Behind Apex</h2>
+            </div>
+            <div class="team-grid">
+                <!-- Detailed Member 1 -->
+                <div class="team-member" style="background: var(--bg-light); padding-bottom: 2rem;">
+                    <div class="member-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500&auto=format&fit=crop" alt="Partner"></div>
+                    <div class="member-info" style="padding: 0 2rem;">
+                        <h4 class="serif">CA Rajesh Khanna</h4>
+                        <p style="margin-bottom: 1rem;">Senior Partner</p>
+                        <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8;">
+                            <li><b>Qualifications:</b> B.Com, FCA, DISA</li>
+                            <li><b>Specialization:</b> Direct Taxation & Statutory Audit</li>
+                            <li><b>Experience:</b> 18+ Years</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Detailed Member 2 -->
+                <div class="team-member" style="background: var(--bg-light); padding-bottom: 2rem;">
+                    <div class="member-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=500&auto=format&fit=crop" alt="Partner"></div>
+                    <div class="member-info" style="padding: 0 2rem;">
+                        <h4 class="serif">Adv. Meera Nair</h4>
+                        <p style="margin-bottom: 1rem;">Managing Partner</p>
+                        <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8;">
+                            <li><b>Qualifications:</b> LL.M (Corporate Law), ACS</li>
+                            <li><b>Specialization:</b> M&A, Intellectual Property & Arbitration</li>
+                            <li><b>Experience:</b> 14+ Years</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Detailed Member 3 -->
+                <div class="team-member" style="background: var(--bg-light); padding-bottom: 2rem;">
+                    <div class="member-img"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=500&auto=format&fit=crop" alt="Partner"></div>
+                    <div class="member-info" style="padding: 0 2rem;">
+                        <h4 class="serif">CA S. Venkatesh</h4>
+                        <p style="margin-bottom: 1rem;">Partner</p>
+                        <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8;">
+                            <li><b>Qualifications:</b> B.Com, ACA, Grad CWA</li>
+                            <li><b>Specialization:</b> GST, Customs & FEMA Compliance</li>
+                            <li><b>Experience:</b> 9+ Years</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Detailed Member 4 -->
+                <div class="team-member" style="background: var(--bg-light); padding-bottom: 2rem;">
+                    <div class="member-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop" alt="Senior Associate"></div>
+                    <div class="member-info" style="padding: 0 2rem;">
+                        <h4 class="serif">Adv. Arun Prasad</h4>
+                        <p style="margin-bottom: 1rem;">Senior Associate</p>
+                        <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8;">
+                            <li><b>Qualifications:</b> B.A.LL.B (Hons), PGDBL</li>
+                            <li><b>Specialization:</b> Civil Litigation & Real Estate Law</li>
+                            <li><b>Experience:</b> 12+ Years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- --- BLOG PAGE --- -->
+    <main id="blog-page" class="page">
+        <section>
+            <div class="section-header">
+                <span>LATEST UPDATES</span>
+                <h2 class="serif">Knowledge Insights</h2>
+            </div>
+            <div class="team-grid">
+                <div class="card" style="border: 1px solid #eee; padding: 2rem;">
+                    <span style="color: var(--gold); font-size: 0.8rem;">MAY 2026</span>
+                    <h3 class="serif" style="margin: 1rem 0;">New GST Amendments You Should Know</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Exploring the latest changes in input tax credit rules for manufacturing units.</p>
+                    <a href="#" style="color: var(--navy); font-weight: 700;">Read More →</a>
+                </div>
+                <div class="card" style="border: 1px solid #eee; padding: 2rem;">
+                    <span style="color: var(--gold); font-size: 0.8rem;">APR 2026</span>
+                    <h3 class="serif" style="margin: 1rem 0;">Income Tax Planning for FY 2026-27</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Strategic advice on diversifying investments to minimize tax liability effectively.</p>
+                    <a href="#" style="color: var(--navy); font-weight: 700;">Read More →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- --- CONTACT PAGE --- -->
+    <main id="contact-page" class="page">
+        <section>
+            <div class="contact-container">
+                <div class="info-box">
+                    <h3 class="serif">Get Expert Advice</h3>
+                    <div class="contact-detail">
+                        <i class="ph ph-map-pin"></i>
+                        <div>
+                            <p><b>Our Office</b></p>
+                            <p>12th Floor, Trade Tower, Race Course Rd,<br>Coimbatore, Tamil Nadu 641018</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="ph ph-phone"></i>
+                        <div>
+                            <p><b>Call Us</b></p>
+                            <p>+91 422 2345678 | +91 90000 00000</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="ph ph-clock"></i>
+                        <div>
+                            <p><b>Working Hours</b></p>
+                            <p>Mon - Fri: 9:30 AM - 6:30 PM<br>Sat: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 2rem;">Schedule a Consultation</h3>
+                    <form class="consultation-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="tel" placeholder="Mobile Number" required>
+                        </div>
+                        <select required>
+                            <option value="" disabled selected>Service Required</option>
+                            <option>Tax Audit & Planning</option>
+                            <option>GST Filing</option>
+                            <option>Company Registration</option>
+                            <option>Legal Advisory</option>
+                        </select>
+                        <textarea rows="6" placeholder="Briefly describe your requirements..."></textarea>
+                        <button type="submit" class="cta-btn" style="cursor: pointer;">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="margin-bottom: 2rem;">
+                    <span class="logo-main" style="color: white;">APEX ASSOCIATES</span>
+                </a>
+                <p>Leading the way in legal and financial consultancy with integrity and excellence. Your growth is our priority.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('services')">Our Services</a></li>
+                    <li><a href="#" onclick="showPage('team')">The Team</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Book Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Practice Areas</h4>
+                <ul>
+                    <li><a href="#">Direct Taxation</a></li>
+                    <li><a href="#">Indirect Taxation (GST)</a></li>
+                    <li><a href="#">Corporate Law</a></li>
+                    <li><a href="#">Litigation Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem;">Get compliance alerts and tax updates directly in your inbox.</p>
+                <div style="display: flex;">
+                    <input type="email" placeholder="Email Address" style="padding: 0.8rem; border: none; width: 100%;">
+                    <button style="background: var(--gold); border: none; padding: 0.8rem; cursor: pointer;"><i class="ph ph-paper-plane-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Apex Legal & Financial Associates. Professional Prototypes by Antigravity.
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId + '-page').classList.add('active');
+            
+            // Update Nav Active
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(l => l.style.color = 'var(--navy)');
+            
+            window.scrollTo(0, 0);
+        }
+
+        // --- Magnetic Effect ---
+        function initMagnetic() {
+            const magnetics = document.querySelectorAll('.magnetic');
+            magnetics.forEach(el => {
+                el.addEventListener('mousemove', (e) => {
+                    const rect = el.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+                });
+                el.addEventListener('mouseleave', () => el.style.transform = `translate(0, 0)`);
+            });
+        }
+
+        // --- Reveal Logic ---
+        function initReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(r => observer.observe(r));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMagnetic();
+            initReveal();
+        });
+
+        // Smooth Scroll for Consultation
+        document.querySelector('.consultation-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Thank you! Our expert will contact you shortly via WhatsApp/Phone.");
+        });
+    </script>
+</body>
+</html>
